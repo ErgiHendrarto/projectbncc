@@ -1,0 +1,363 @@
+Maaf atas ketidaknyamanan. Berikut adalah kode lengkap tanpa komentar:
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Front-end Project</title>
+    <link rel="icon" href="img/bncclogo.png">
+    <style>
+        @media only screen and (max-width: 600px) {
+            .home {
+                padding: 20px;
+            }
+
+            .home-content {
+                padding: 10px;
+            }
+
+            .about {
+                padding: 10% 8%;
+                gap: 1em;
+                flex-direction: column;
+            }
+
+            .about-img img {
+                width: 100%;
+                border-radius: 5px;
+            }
+
+            .about-content {
+                text-align: center;
+            }
+
+            .portf,
+            .contact {
+                padding: 10% 8%;
+                gap: 1em;
+                flex-direction: column;
+            }
+
+            .calc,
+            .website {
+                width: 100%;
+            }
+
+            form {
+                width: 100%;
+            }
+        }
+
+        body {
+            margin: 0;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            background-color: #fff;
+        }
+
+        header {
+            background-color: #333; 
+            color: #fff; 
+            padding: 15px;
+            text-align: center;
+        }
+
+        .navbar a {
+            text-decoration: none;
+            color: #fff;
+            margin: 0 15px;
+        }
+
+        .h1:hover {
+            transition: 0.3s;
+            text-decoration: underline;
+        }
+
+        .home {
+            padding: 50px;
+            text-align: center;
+        }
+
+        .home-content {
+            padding: 20px;
+            background-color: #f8f8f8;
+        }
+
+        .home-content h1 {
+            color: #333;
+            font-size: 45px;
+        }
+
+        .home-content h3 {
+            color: #555; 
+        }
+
+        .home-content p {
+            color: #777;
+        }
+
+        ::-webkit-scrollbar {
+            width: 15px;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background-color: rgb(99, 99, 99);
+        }
+
+        ::-webkit-scrollbar-track {
+            background-color: #333;
+            width: 50px;
+        }
+
+        .about {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 12% 8%;
+            gap: 10em;
+            background: whitesmoke;
+        }
+
+        .about-img img {
+            position: relative;
+            width: 450px;
+            border-radius: 500px;
+        }
+
+        .heading {
+            font-size: 44px;
+            text-decoration: underline;
+        }
+
+        .h3 {
+            font-size: 22px;
+        }
+
+        .desc {
+            font-size: 17px;
+        }
+
+        .li {
+            font-size: 15px;
+        }
+
+        .skill-container {
+            display: flex;
+            width: auto;
+        }
+
+        .skill {
+            display: flex;
+            justify-content: space-around;
+            margin-top: 10px;
+            width: 70px;
+            height: auto;
+            margin-right: 25px;
+        }
+
+        .about-img:hover {
+            transition: 0.1s;
+            border-radius: 5px;
+            box-shadow: 0 0 80px;
+            border-radius: 500px;
+        }
+
+        .skill:hover {
+            box-shadow: 0 0 8px;
+        }
+
+        .portf {
+            margin-top: 50px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 12% 8%;
+            gap: 10em;
+            background: whitesmoke;
+        }
+
+        .calc,
+        .website {
+            height: auto;
+            width: 200px;
+            transition: 0.4s;
+        }
+
+        .calc:hover,
+        .website:hover {
+            transition: 0.2s;
+            box-shadow: 0 0 8px;
+        }
+
+        .contactus {
+            margin-top: 50px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 12% 8%;
+            gap: 10em;
+        }
+
+        form {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 300px;
+            margin: 0 auto;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+        }
+
+        input,
+        textarea {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 16px;
+            box-sizing: border-box;
+        }
+
+        button {
+            background-color: #333;
+            color: #fff;
+            padding: 10px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            opacity: 0.7;
+        }
+
+        .error {
+            color: #ff0000;
+            margin-bottom: 8px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+       <nav class="navbar">
+        <a class="h1" href="#home">Home</a>
+        <a class="h1" href="#about">About Me</a>
+        <a class="h1" href="#portfolio">Portfolio</a>
+        <a class="h1" href="#contact">Contact Us</a>
+       </nav>
+    </header>
+    <section id="home" class="home">
+        <div class="home-content">
+            <h1>Hi, Welcome to my Portfolio!</h1>
+            <h3>BNCC Project</h3>
+        </div>
+    </section>
+    <section id="about" class="about">
+        <div class="about-img">
+            <img src="/img/1.jpeg" alt="">
+        </div>
+        <div class="about-content">
+            <h2 class="heading"> About Me</h2>
+            <h3 class="h3">Binusian 2027 - Computer Science</h3>
+            <p class="desc"><b>Ergi Hendrarto Putra.</b> Lahir pada tahun 2005. 
+            Besar di Tangerang selatan. Memiliki Hobi bermain bulutangkis, membuat mini project, dan suka belajar hal baru.
+            Bekerja dibawah tekanan tidak masalah bagi saya, karena itu bisa membuat diri saya menjadi lebih baik lagi. Menguasai Front-end Development dengan baik</p>
+            <li class="li">
+                  2011-2016 <
+
+b>SD Nusa Indah</b><br>
+            </li>
+            <li class="li">
+                2016-2020 <b>SMP Nusa Indah</b>
+            </li>
+            <li class="li">
+                2020-2023 <b>SMA Erenos</b>
+            </li>
+            <li class="li">
+                2023 <b>Bina Nusantara University</b>
+            </li>
+            <h2>Skill</h2><br>
+            <div class="skill-container">
+                <img class="skill" src="img/C_Logo.png" alt="">
+                <img class="skill" src="img/Python-logo-notext.svg.png" alt="">
+                <img class="skill" src="img/JavaScript-logo.png" alt="">
+                <img class="skill" src="img/logohtml.png" alt="">
+                <img class="skill" src="img/logocss.png" alt="">
+            </div>
+        </div>
+    </section>
+
+    <section id="portfolio" class="portf">
+        <h3 style="font-size: 30px;">Projects</h3>
+        <img class="calc" src="img/HTML-Calculator.png" alt="">
+        <img class="website" src="img/scrnli_2_14_2024_3-10-14 PM.png" alt="">
+    </section>
+    <section id="contact" class="contactus">
+        <h2 class="contactus">Contact Us</h2>
+        <form id="myForm">
+            <label for="fullName">Nama Lengkap:</label>
+            <input type="text" id="fullName" name="fullName" required>
+          
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$" required>
+          
+            <label for="phoneNumber">Nomor Telepon:</label>
+            <input type="tel" id="phoneNumber" name="phoneNumber" pattern="08[0-9]{10,12}" required>
+          
+            <label for="comment">Comment:</label>
+            <textarea id="comment" name="comment" rows="4" required minlength="5" maxlength="100"></textarea>
+          
+            <div id="error-message" class="error"></div>
+          
+            <button type="button" onclick="validateForm()">Submit</button>
+        </form>
+    </section>
+
+    <script>
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        function validateForm() {
+            var fullName = document.getElementById("fullName").value;
+            var email = document.getElementById("email").value;
+            var phoneNumber = document.getElementById("phoneNumber").value;
+            var comment = document.getElementById("comment").value;
+            var errorMessage = document.getElementById("error-message");
+
+            errorMessage.innerHTML = "";
+
+            if (fullName.trim() === "") {
+                errorMessage.innerHTML = "Nama lengkap harus diisi.";
+                return;
+            }
+
+            if (!email.match(/[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/)) {
+                errorMessage.innerHTML = "Email harus valid.";
+                return;
+            }
+
+            if (!phoneNumber.match(/^08[0-9]{10,12}$/)) {
+                errorMessage.innerHTML = "Nomor telepon harus dimulai dengan '08' dan tidak lebih dari 14 digit.";
+                return;
+            }
+
+            if (comment.trim().split(/\s+/).length < 5 || comment.trim().split(/\s+/).length > 100) {
+                errorMessage.innerHTML = "Comment harus terdiri dari minimal 5 kata dan maksimal 100 kata.";
+                return;
+            }
+
+            console.log("Form submitted successfully!");
+        }
+    </script>
+</body>
+</html>
